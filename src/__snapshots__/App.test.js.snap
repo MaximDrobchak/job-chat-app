@@ -2,20 +2,70 @@
 
 exports[`App есть корректный снимок 1`] = `
 <div
-  className="App"
+  className="App-root-0-1-1"
 >
-  <p>
-    Test
-  </p>
-  <div>
+  <div
+    className="Header-root-0-1-3"
+  >
     <h1>
-      Hello, world!
+      Terry Crews
     </h1>
-    <h2>
-      It is 
-      22:35:25
-      .
-    </h2>
+    <span
+      className="Button-root-0-1-4"
+      onClick={[Function]}
+    >
+      <img
+        alt="setting"
+        src="settings.svg"
+      />
+    </span>
+  </div>
+  <div
+    className="Main-root-0-1-5"
+  >
+    Dummy component: Main
+  </div>
+  <div
+    className="Footer-root-0-1-6"
+  >
+    <div
+      className="MessageInput-root-0-1-7"
+    >
+      <input
+        placeholder="Message to Terry Crews"
+        type="text"
+      />
+      <span
+        className="MessageInput-buttonMessage-0-1-8"
+        onClick={[Function]}
+      >
+        <img
+          alt="attachment"
+          src="attachment.svg"
+        />
+      </span>
+    </div>
+    <div>
+      <span>
+        Enter to send a message 
+        <strong>
+          Shift + Enter
+        </strong>
+         for new line
+      </span>
+      <blockquote>
+        <b>
+          *bold 
+        </b>
+        <i>
+          _italic_ 
+        </i>
+        <strike>
+          ~strice~ 
+        </strike>
+        &gt;qoute
+      </blockquote>
+    </div>
   </div>
 </div>
 `;

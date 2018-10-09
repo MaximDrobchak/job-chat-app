@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header есть корректный снимок 1`] = `
+<div
+  className="Header-root-0-1-1"
+>
+  <h1>
+    Terry Crews
+  </h1>
+  <span
+    className="Button-root-0-1-2"
+    onClick={[Function]}
+  >
+    <img
+      alt="setting"
+      src="settings.svg"
+    />
+  </span>
+</div>
+`;

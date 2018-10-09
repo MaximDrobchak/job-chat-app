@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer есть корректный снимок 1`] = `
+<div
+  className="Footer-root-0-1-1"
+>
+  <div
+    className="MessageInput-root-0-1-2"
+  >
+    <input
+      placeholder="Message to Terry Crews"
+      type="text"
+    />
+    <span
+      className="MessageInput-buttonMessage-0-1-3"
+      onClick={[Function]}
+    >
+      <img
+        alt="attachment"
+        src="attachment.svg"
+      />
+    </span>
+  </div>
+  <div>
+    <span>
+      Enter to send a message 
+      <strong>
+        Shift + Enter
+      </strong>
+       for new line
+    </span>
+    <blockquote>
+      <b>
+        *bold 
+      </b>
+      <i>
+        _italic_ 
+      </i>
+      <strike>
+        ~strice~ 
+      </strike>
+      &gt;qoute
+    </blockquote>
+  </div>
+</div>
+`;

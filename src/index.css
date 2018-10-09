@@ -1,0 +1,47 @@
+html,
+body,
+div,
+form,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+p,
+caption {
+  font-weight: normal;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  padding: 5px;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
+	background: #fff;
+	text-align: center;
+	
+}

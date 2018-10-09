@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button есть корректный снимок 1`] = `
+<span
+  className="Button-root-0-1-1"
+  onClick={[Function]}
+/>
+`;

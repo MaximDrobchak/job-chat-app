@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageInput есть корректный снимок 1`] = `
+<div
+  className="MessageInput-root-0-1-1"
+>
+  <input
+    placeholder="Message to Terry Crews"
+    type="text"
+  />
+  <span
+    className="MessageInput-buttonMessage-0-1-2"
+    onClick={[Function]}
+  >
+    <img
+      alt="attachment"
+      src="attachment.svg"
+    />
+  </span>
+</div>
+`;
