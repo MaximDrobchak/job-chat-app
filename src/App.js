@@ -9,19 +9,30 @@ import MessageInput from './elements/MessageInput';
 
 const styles = {
 	root: {
+		width: '92vw',
+		height: '95vh',
+		position: 'relative',
 		borderRadius: 4,
 		backgroundColor: '#fff',
 		maxWidth: 1040,
-		minHeight: 300,
 		border: '1px solid black',
 		display: 'flex',
 		flexDirection: 'column',
+		textRendering: 'optimizeLegibility',
+		background: '#fff',
+		textAlign: 'center',
 	},
 	padding: {
 		top: 20,
 		bottom: 20,
 		left: 20,
 		right: 20,
+	},
+	'@media (max-width: 1039px)': {
+		root: {
+			width: '92vw',
+			height: '95vh',
+		},
 	},
 };
 class App extends Component {

@@ -6,6 +6,7 @@ import Button from '../../elements/Button';
 const styles = {
 	root: {
 		display: 'flex',
+		minHeight: 55,
 		justifyContent: 'space-between',
 		padding: {
 			top: 20,
