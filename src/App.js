@@ -12,7 +12,7 @@ const styles = {
 		borderRadius: 4,
 		backgroundColor: '#fff',
 		maxWidth: 1040,
-		minHeight: 904,
+		minHeight: 300,
 		border: '1px solid black',
 		display: 'flex',
 		flexDirection: 'column',
@@ -26,20 +26,12 @@ const styles = {
 };
 class App extends Component {
 	render() {
-		console.log(this.props.testStore);
-		const { classes, testStore } = this.props;
+		console.log(this.props.messageStore);
+		const { classes } = this.props;
 		return (
 			<div className={classes.root}>
 				<Header />
-				<Main
-					children={
-						<ul>
-							{testStore.map((message, index) => (
-								<li key={index}>{message}</li>
-							))}
-						</ul>
-					}
-				/>
+				<Main />
 				<Footer children={<MessageInput />} />
 			</div>
 		);
@@ -49,5 +41,5 @@ App.propTypes = {
 	classes: PropTypes.object.isRequired,
 };
 export default connect(state => ({
-	testStore: state,
+	messageStore: state,
 }))(injectSheet(styles)(App));

@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
 
-
 const messages = (state = [], action) => {
 	if (action.type === 'ADD_MESSAGE') {
 		return [...state, action.messageList];

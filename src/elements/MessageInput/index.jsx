@@ -62,7 +62,7 @@ MessageInput.propTypes = {
 };
 export default connect(
 	state => ({
-		testStore: state,
+		messageStore: state,
 	}),
 	dispatch => ({
 		onAddMessage: messageName => {
