@@ -6,10 +6,17 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
 
-const story = () => createStore({}, {});
+
+const messages = (state = [], action) => {
+	if (action.type === 'ADD_MESSAGE') {
+		return [...state, action.messageList];
+	}
+	return state;
+};
+const store = createStore(messages);
 
 render(
-	<Provider story={story}>
+	<Provider store={store}>
 		<App />
 	</Provider>,
 	document.getElementById('root')

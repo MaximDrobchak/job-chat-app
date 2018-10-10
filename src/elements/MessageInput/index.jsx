@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import attachmentImage from '../../assets/attachment.svg';
+import { connect } from 'react-redux';
+
 const styles = {
 	root: {
 		position: 'relative',
@@ -22,20 +24,52 @@ const styles = {
 		top: '25%',
 	},
 };
-const MessageInput = ({ classes }) => (
-	<div className={classes.root}>
-		<input
-			// className={classes.inputMessage}
-			type="text"
-			placeholder="Message to Terry Crews"
-		/>
-		<Button className={classes.buttonMessage}>
-			<img src={attachmentImage} alt="attachment" />
-		</Button>
-	</div>
-);
+class MessageInput extends Component {
+	state = {
+		input: '',
+	};
 
+	addMessage() {
+		console.log(this.MessageInput.value);
+		this.props.onAddMessage(this.MessageInput.value);
+		this.MessageInput.value = '';
+	}
+	render() {
+		const { classes } = this.props;
+		return (
+			<div className={classes.root}>
+				<input
+					onKeyUp={e => {
+						if (e.key === 'Enter' && e.shiftKey) {
+							this.addMessage();
+						}
+					}}
+					ref={input => {
+						this.MessageInput = input;
+					}}
+					type="text"
+					placeholder="Message to Terry Crews"
+				/>
+				<Button className={classes.buttonMessage}>
+					<img src={attachmentImage} alt="attachment" />
+				</Button>
+			</div>
+		);
+	}
+}
 MessageInput.propTypes = {
 	classes: PropTypes.object.isRequired,
 };
-export default injectSheet(styles)(MessageInput);
+export default connect(
+	state => ({
+		testStore: state,
+	}),
+	dispatch => ({
+		onAddMessage: messageName => {
+			dispatch({
+				type: 'ADD_MESSAGE',
+				messageList: messageName,
+			});
+		},
+	})
+)(injectSheet(styles)(MessageInput));

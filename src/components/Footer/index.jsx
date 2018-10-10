@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
-import MessageInput from '../../elements/MessageInput';
 
 const styles = {
 	root: {
@@ -31,10 +30,10 @@ const styles = {
 };
 class Footer extends Component {
 	render() {
-		const { classes } = this.props;
+		const { classes, children } = this.props;
 		return (
 			<div className={classes.root}>
-				<MessageInput />
+				{children}
 				<div>
 					<span>
 						Enter to send a message <strong>Shift + Enter</strong> for new line
@@ -53,5 +52,6 @@ class Footer extends Component {
 
 Footer.propTypes = {
 	classes: PropTypes.object.isRequired,
+	children: PropTypes.object.isRequired,
 };
 export default injectSheet(styles)(Footer);

@@ -15,8 +15,8 @@ const styles = {
 };
 class Main extends Component {
 	render() {
-		const { classes } = this.props;
-		return <div className={classes.root}>Dummy component: Main</div>;
+		const { classes, children } = this.props;
+		return <div className={classes.root}>{children}</div>;
 	}
 }
 
