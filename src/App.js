@@ -21,6 +21,7 @@ const styles = {
 		textRendering: 'optimizeLegibility',
 		background: '#fff',
 		textAlign: 'center',
+		margin: 'auto',
 	},
 	padding: {
 		top: 20,
@@ -51,6 +52,7 @@ class App extends Component {
 App.propTypes = {
 	classes: PropTypes.object.isRequired,
 };
+
 export default connect(state => ({
 	messageStore: state,
 }))(injectSheet(styles)(App));

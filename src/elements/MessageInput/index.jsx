@@ -50,7 +50,8 @@ class MessageInput extends Component {
 					type="text"
 					placeholder="Message to Terry Crews"
 				/>
-				<Button className={classes.buttonMessage}>
+
+				<Button className={classes.buttonMessage} text="attachment">
 					<img src={attachmentImage} alt="attachment" />
 				</Button>
 			</div>
@@ -60,6 +61,7 @@ class MessageInput extends Component {
 MessageInput.propTypes = {
 	classes: PropTypes.object.isRequired,
 };
+
 export default connect(
 	state => ({
 		messageStore: state,

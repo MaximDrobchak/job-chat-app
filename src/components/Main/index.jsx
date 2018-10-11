@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import man from '../../assets/man.png';
 import wooman from '../../assets/oval-4-copy_2018-10-09/oval-4-copy.jpg';
+
 const styles = {
 	root: {
 		overflow: 'auto',
@@ -140,6 +141,7 @@ class Main extends Component {
 	}
 	render() {
 		const { classes, messageStore } = this.props;
+
 		return (
 			<div className={classes.root}>
 				{messageStore.map(
@@ -184,6 +186,7 @@ class Main extends Component {
 
 Main.propTypes = {
 	classes: PropTypes.object.isRequired,
+	messageStore: PropTypes.array.isRequired,
 };
 export default connect(state => ({
 	messageStore: state,

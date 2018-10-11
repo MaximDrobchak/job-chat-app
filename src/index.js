@@ -5,14 +5,12 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
+import messages from './reducers/messages';
 
-const messages = (state = [], action) => {
-	if (action.type === 'ADD_MESSAGE') {
-		return [...state, action.messageList];
-	}
-	return state;
-};
-const store = createStore(messages);
+const store = createStore(
+	messages,
+	window.__REDUX_DEVTOOLS_EXTENSION && window.__REDUX_DEVTOOLS_EXTENSION()
+);
 
 render(
 	<Provider store={store}>

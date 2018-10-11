@@ -31,7 +31,7 @@ class Header extends Component {
 		return (
 			<div className={classes.root}>
 				<h1>{user.name}</h1>
-				<Button>
+				<Button text="setting">
 					<img src={settingIcon} alt="setting" />
 				</Button>
 			</div>
